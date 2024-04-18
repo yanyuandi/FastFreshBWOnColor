@@ -1,5 +1,5 @@
 ## 7.5寸三色墨水屏黑白局部快刷驱动
-![image](jpg/109A0671.jpg)
+![image](jpg/刷新效果图.jpg)
 
 ### 项目简介
 此项目在三色墨水屏上增加了黑白两色的局部快刷，并且集成到<a target="_blank" href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a>库中，原库中的函数可以正常使用，使用黑白局部快刷的时候调用新加函数即可 <br>
@@ -36,4 +36,4 @@ http.begin(Client, "http://日期.php");
 
 
 ### 制作不易，感谢支持
-![image](jpg/109A0671.jpg)
+![image](jpg/赞赏码.jpg)
