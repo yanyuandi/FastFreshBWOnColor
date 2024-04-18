@@ -3,7 +3,7 @@
 
 ### 项目简介
 此项目在三色墨水屏上增加了黑白两色的局部快刷，并且集成到<a target="_blank" href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a>库中，原库中的函数可以正常使用，使用黑白局部快刷的时候调用新加函数即可 <br>
-感谢@su @游牧 @BlackCat
+（感谢@su @游牧 @BlackCat）
 - **B站视频演示地址：[点击观看视频](https://www.bilibili.com/video/BV1Fo4y137n9/?vd_source=a935ffb91a0eac4e16a0461b0709faa9)**<br>
 - <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=OCk2mwPC4yZn-BBJlH2ehWT-2sHfC7Os&jump_from=webapi&authKey=iFtohDmv6OI7O5aD/0ogd6mODvY5vr837fherj6ruuDCK94UM5KrjicZ2cFO5dHB"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="墨水屏DIY交流群" title="墨水屏DIY交流群"></a>QQ交流群：1051455459
 
@@ -26,7 +26,7 @@
     display.fillScreen(GxEPD_WHITE);
     display.firstPage();     
     do {
-       //执行你的刷新程序
+       //你的代码
         } while (display.nextPageBW());
 ``` 
 - 驱动保留了原有的局刷函数，方便用全刷的方式更新墨水屏部分区域，适合全刷需要获取大量api的情况，只更新部分就行可以减少刷新时间<br>
@@ -35,7 +35,7 @@
     display.fillScreen(GxEPD_WHITE);
     display.firstPage();     
     do {
-       //执行你的刷新程序
+       //你的代码
         } while (display.nextPage());
 ``` 
 
