@@ -9,7 +9,7 @@
 
 ### 使用的硬件
 - 一个使用<a target="_blank" href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a>库中GxEPD2_750c_Z08驱动的7.5寸三色墨水屏，驱动芯片为UC8179
-- 一个墨水屏开发板
+- 一个ESP32C3墨水屏开发板（闲鱼搜用户<光芒之轻>有成品售卖）
 
 ### 7.5inch_Multifunctional_E-Paper文件夹
 - 此文件夹中包含驱动墨水屏主要代码，包含了获取天气日期微博热搜等数据代码以及显示代码，需要使用arduino编译，编译之前注意头文件引用的库，没有的需要单独安装。<br>
