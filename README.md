@@ -11,28 +11,39 @@
 - 一个使用<a target="_blank" href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a>库中GxEPD2_750c_Z08驱动的7.5寸三色墨水屏，驱动芯片为UC8179
 - 一个ESP32C3墨水屏开发板（闲鱼搜用户<光芒之轻>有成品售卖）
 
-### 7.5inch_Multifunctional_E-Paper文件夹
-- 此文件夹中包含驱动墨水屏主要代码，包含了获取天气日期微博热搜等数据代码以及显示代码，需要使用arduino编译，编译之前注意头文件引用的库，没有的需要单独安装。<br>
+### 示例DEMO文件夹
+- 此文件夹中为示例代码，根据自己的驱动板修改相关io口以及无线网账号密码，编译上传墨水屏后即可查看效果。<br>
 
-- 代码需要修改每个get***.ino文件中的api地址，例如  
+### 驱动文件夹
+- 此文件夹中为集成过的驱动文件，使用时请备份原驱动后直接替换到库的目录中<br>
+
+- 黑白局刷调用方式如下，注意程序中不能有红色，使用display.setPartialWindow函数，然后刷新的时候使用display.nextPageBW函数
 
 
-``` python
-http.begin(Client, "http://日期.php");
+``` C
+    display.setPartialWindow(248, 204, 120, 120);
+    display.fillScreen(GxEPD_WHITE);
+    display.firstPage();     
+    do {
+       //执行你的刷新程序
+        } while (display.nextPageBW());
+``` 
+- 驱动保留了原有的局刷函数，方便用全刷的方式更新墨水屏部分区域，适合全刷需要获取大量api的情况，只更新部分就行可以减少刷新时间<br>
+ ``` C
+    display.setPartialWindow(248, 204, 120, 120);
+    display.fillScreen(GxEPD_WHITE);
+    display.firstPage();     
+    do {
+       //执行你的刷新程序
+        } while (display.nextPage());
 ``` 
 
-
-
-### 墨水屏显示整个逻辑介绍
-- 第一次上电或者更换无线网络环境后，开机后会首先显示开机画面，然后无线网连接失败会进入配网界面  
-- 配网成功后等待片刻，会进入整个界面，所有数据分别获取然后统一刷新
-- 整个墨水屏会两个小时全刷一次，每次刷新都卡在整点（由于没有局刷，所以目前是整个刷新）  
-- 待办事件10秒钟会获取一次服务器的数据进行对比，如果有更新，会马上刷新墨水屏  
-- 一言api每次刷新都会改变内容  
-- 下方向按键按下后可以立马刷新墨水屏所有内容  
+### 注意事项
+- 确保自己墨水屏驱动ic为UC8179 
+- 在调用display.setFullWindow()的时候不要使用display.nextPageBW()更新
 
 ### 已知bug
-- 第一次上电后右上角的刷新于后面的时间会更新错误，手动刷新一次即可（待完善）  
+-   
 
 
 ### 制作不易，感谢支持
