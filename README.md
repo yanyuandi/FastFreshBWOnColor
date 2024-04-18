@@ -3,6 +3,7 @@
 
 ### 项目简介
 此项目在三色墨水屏上增加了黑白两色的局部快刷，并且集成到<a target="_blank" href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a>库中，原库中的函数可以正常使用，使用黑白局部快刷的时候调用新加函数即可 <br>
+感谢@su @游牧 @BlackCat
 - **B站视频演示地址：[点击观看视频](https://www.bilibili.com/video/BV1Fo4y137n9/?vd_source=a935ffb91a0eac4e16a0461b0709faa9)**<br>
 - <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=OCk2mwPC4yZn-BBJlH2ehWT-2sHfC7Os&jump_from=webapi&authKey=iFtohDmv6OI7O5aD/0ogd6mODvY5vr837fherj6ruuDCK94UM5KrjicZ2cFO5dHB"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="墨水屏DIY交流群" title="墨水屏DIY交流群"></a>QQ交流群：1051455459
 
@@ -40,11 +41,12 @@
 
 ### 注意事项
 - 确保自己墨水屏驱动ic为UC8179 
-- 在调用display.setFullWindow()的时候不要使用display.nextPageBW()更新
+- 在调用display.setFullWindow()的时候请勿使用display.nextPageBW()更新
+- 建议局刷一定次数之后全刷屏幕消除残影
 
 ### 已知bug
--   
+- 待补充
 
 
-### 制作不易，感谢支持
+### 🌟制作不易，感谢支持🌟
 ![image](jpg/赞赏码.jpg)
