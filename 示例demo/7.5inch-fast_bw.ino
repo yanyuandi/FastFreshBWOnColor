@@ -27,9 +27,7 @@ GxEPD2_3C<GxEPD2_750c_Z08, GxEPD2_750c_Z08::HEIGHT / 2> display(GxEPD2_750c_Z08(
 
 
 void setup() {
-  Serial.begin(115200);
-  Serial.println();
-  Serial.println("UI 初始化");
+  Serial.begin(115200);  
   SPI.end();
   SPI.begin(13, 14, 14, 4);
 
