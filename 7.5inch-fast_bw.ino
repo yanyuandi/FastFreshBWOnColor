@@ -10,8 +10,8 @@
 
 #define NORMAL_FONT u8g2_font_wqy16_t_gb2312a  //设置NORMAL_FONT默认字体
 
-const char* ssid = "yanyuandi";
-const char* password = "beipiaoguizu";
+const char* ssid = "";
+const char* password = "";
 
 // NTP服务器相关信息
 #define TZ 8      // 时区偏移值，以 UTC+8 为例
@@ -22,11 +22,8 @@ const char* password = "beipiaoguizu";
 
 U8G2_FOR_ADAFRUIT_GFX u8g2Fonts;
 
-GxEPD2_3C<GxEPD2_750c_Z08, GxEPD2_750c_Z08::HEIGHT / 2> display(GxEPD2_750c_Z08(/*CS=D8*/ 4, /*DC=D3*/ 27, /*RST=D4*/ 26, /*BUSY=D2*/ 25));  //即可。GxEPD2_420c_1680就是驱动程序文件名。
-//GxEPD2_BW<GxEPD2_750_YT7, GxEPD2_750_YT7::HEIGHT> display(GxEPD2_750_YT7(/*CS=D8*/ 4, /*DC=D3*/ 27, /*RST=D4*/ 26, /*BUSY=D2*/ 25)); // GDEY075T7 800x480, UC8179 (GD7965)
-//GxEPD2_BW<GxEPD2_583_T8, GxEPD2_583_T8::HEIGHT> display(GxEPD2_583_T8(/*CS=5*/ SS, /*DC=*/ 17, /*RST=*/ 16, /*BUSY=*/ 4));
-//GxEPD2_BW<GxEPD2_750, GxEPD2_750::HEIGHT> display(GxEPD2_750(/*CS=D8*/ 4, /*DC=D3*/ 27, /*RST=D4*/ 26, /*BUSY=D2*/ 25)); // GDEW075T8 640x384, UC8159c (IL0371)
-//GxEPD2_BW<GxEPD2_750_T7, GxEPD2_750_T7::HEIGHT / 2> display(GxEPD2_750_T7(/*CS=D8*/ 4, /*DC=D3*/ 27, /*RST=D4*/ 26, /*BUSY=D2*/ 25)); // GDEW075T7 800x480, EK79655 (GD7965)
+GxEPD2_3C<GxEPD2_750c_Z08, GxEPD2_750c_Z08::HEIGHT / 2> display(GxEPD2_750c_Z08(/*CS=D8*/ 4, /*DC=D3*/ 27, /*RST=D4*/ 26, /*BUSY=D2*/ 25));  
+
 
 
 void setup() {
