@@ -626,7 +626,7 @@ const unsigned char GxEPD2_750c_Z08::lut_22_LUTKW_partial[42] PROGMEM =
 
 const unsigned char GxEPD2_750c_Z08::lut_23_LUTWK_partial[42] PROGMEM =
 { // 01 b
-  0x84, T1, T2, T3, T4, 1, 
+  0xA5, T1, T2, T3, T4, 1, 
   //0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 
 };
 
